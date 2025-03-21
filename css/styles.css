@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #D72323;
+    --secondary-color: #EEEEEE;
+    --tertiary-color: #3A4750;
+    --quaternary-color: #303841;
+    --quaternary-dark-color: #202021;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.08em;
+    font-size: 1rem;
+}
+h1{
+    font-size: 3.8rem!important;
+    font-weight: 600!important;
+    
+}
+.navbar {
+    background-color: var(--quaternary-dark-color);
+    position: relative;
+    z-index: 9999; /* Valor muy alto para que esté sobre todos los demás elementos */
+}
+
+/* Estilos del botón toggle de navegación */
+.navbar-toggler {
+    border: none !important; /* Elimina el borde */
+    box-shadow: none !important; /* Elimina la sombra al hacer focus */
+    padding: 0; /* Ajusta el padding según necesites */
+    position: relative; /* Necesario para que z-index funcione */
+    z-index: 9999; /* Valor muy alto para estar sobre todos los elementos */
+}
+
+.hero__imagen-fondo{
+    filter: brightness(0.9);
+    opacity: 0.5;
+    position: absolute;
+        right: -150px; 
+        top: 0; 
+        width: 80%; 
+        height: 100%; 
+        z-index: 1; 
+
+}   
+
+/* Cambia el color del icono a blanco */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+   
+}
+
+.navbar-toggler:focus { 
+    
+    box-shadow: none !important; /* Elimina la sombra al hacer focus */
+}
+   
+
+/* Estilos generales */
+.container__hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap !important; /* Evita que los elementos se envuelvan en pantallas pequeñas */
+    position: relative; /* Para el posicionamiento relativo */
+}
+.hero__section {
+    height: 100vh;
+    background-color: var(--quaternary-dark-color);
+}
+.container__hero {
+   height: 80vh;
+}
+.hero__imagen img {
+   filter: brightness(0.5);
+    object-fit: cover; /* Mantiene las proporciones de la imagen */
+}
+
+
+/* Estilos responsive para el hero */
+@media (max-width: 991.98px) {
+    .container__hero {
+        overflow: hidden; /* Evita desbordamiento */
+    }
+    
+    .hero__texto {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        z-index: 2; /* Por encima de la imagen */
+        position: relative; /* Para que funcione el z-index */
+        padding-right: 0; /* Elimina padding para maximizar espacio */
+    }
+    
+    .hero__imagen {
+        position: absolute; /* Posicionamiento absoluto respecto al contenedor */
+        right: -15px; /* Pegado a la derecha */
+        top: 0; /* Alineado con el principio del contenedor */
+        width: 70%; /* Ancho reducido para no ocupar todo el espacio */
+        height: 100%; /* Ocupa todo el alto del contenedor */
+        z-index: 1; /* Por debajo del texto */
+    }
+    
+    .hero__imagen img {
+        height: 100%; /* La imagen ocupa todo el alto del contenedor */
+        object-fit: cover; /* Mantiene las proporciones de la imagen */
+    }
+}
+
+/* Ajustes para dispositivos muy pequeños */
+@media (max-width: 575.98px) {
+    .hero__imagen {
+        width: 70%; /* En móviles más pequeños, la imagen ocupa menos espacio */
+        height: 80%;
+    }
+    
+    .hero__texto {
+        padding-right: 0; /* Elimina padding para maximizar espacio */
+        margin-left: 40px;
+        
+    }
+}
+
+@media (min-width: 768px) {
+    .container__hero {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+    }
+    .hero__imagen {
+        position: absolute; /* Posicionamiento absoluto respecto al contenedor */
+        right: -15px; /* Pegado a la derecha */
+        top: 0; /* Alineado con el principio del contenedor */
+        width: 80%; /* Ancho reducido para no ocupar todo el espacio */
+        height: 80%; /* Ocupa todo el alto del contenedor */
+        z-index: 1; /* Por debajo del texto */
+    }
+}
