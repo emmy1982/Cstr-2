@@ -8,7 +8,7 @@
     --secondary-color: #EEEEEE;
     --tertiary-color: #3A4750;
     --quaternary-color: #303841;
-    --quaternary-dark-color: #202021;
+    --quaternary-dark-color: #1c1c1c;
 }
 
 body {
@@ -16,16 +16,18 @@ body {
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.08em;
     font-size: 1rem;
+    background-color: var(--secondary-color);
 }
 h1{
     font-size: 3.8rem!important;
     font-weight: 600!important;
-    
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.516);
 }
+
 .navbar {
-    background-color: var(--quaternary-dark-color);
-    position: relative;
-    z-index: 9999; /* Valor muy alto para que esté sobre todos los demás elementos */
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
 }
 
 /* Estilos del botón toggle de navegación */
@@ -41,9 +43,9 @@ h1{
     filter: brightness(0.9);
     opacity: 0.5;
     position: absolute;
-        right: -150px; 
+        right: 0px; 
         top: 0; 
-        width: 80%; 
+        width: 40%; 
         height: 100%; 
         z-index: 1; 
 
@@ -71,16 +73,33 @@ h1{
 }
 .hero__section {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--quaternary-dark-color);
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    padding-top: 0;
 }
 .container__hero {
    height: 80vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 .hero__imagen img {
    filter: brightness(0.5);
     object-fit: cover; /* Mantiene las proporciones de la imagen */
 }
 
+/* Ajuste para compensar el navbar fijo */
+.hero__section {
+    padding-top: 76px;
+}
 
 /* Estilos responsive para el hero */
 @media (max-width: 991.98px) {
@@ -98,10 +117,11 @@ h1{
     .hero__imagen {
         position: absolute; /* Posicionamiento absoluto respecto al contenedor */
         right: -15px; /* Pegado a la derecha */
-        top: 0; /* Alineado con el principio del contenedor */
+        top: 10%; /* Alineado con el principio del contenedor */
         width: 70%; /* Ancho reducido para no ocupar todo el espacio */
         height: 100%; /* Ocupa todo el alto del contenedor */
         z-index: 1; /* Por debajo del texto */
+
     }
     
     .hero__imagen img {
