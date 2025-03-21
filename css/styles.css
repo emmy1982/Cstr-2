@@ -182,3 +182,172 @@ h1{
 .container-dark .col:hover {
     transform: translateY(-5px);
 }
+
+/* Footer Styles */
+footer {
+    background-color: var(--quaternary-dark-color);
+}
+
+footer h5 {
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+footer .hover-primary {
+    transition: color 0.3s ease;
+}
+
+footer .hover-primary:hover {
+    color: var(--primary-color) !important;
+}
+
+footer .bi {
+    transition: transform 0.3s ease;
+}
+
+footer .bi:hover {
+    transform: translateY(-3px);
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+}
+
+footer hr {
+    opacity: 0.1;
+}
+
+/* Contacto Styles */
+#contacto {
+    background-color: var(--secondary-color);
+}
+
+#contacto .form-control {
+    border: 1px solid #dee2e6;
+    padding: 1rem 0.75rem;
+}
+
+#contacto .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(215, 35, 35, 0.25);
+}
+
+#contacto .form-floating > .form-control:focus ~ label,
+#contacto .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--primary-color);
+}
+
+#contacto .btn-dark {
+    background-color: var(--quaternary-dark-color);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#contacto .btn-dark:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+#contacto .bi {
+    color: var(--primary-color);
+}
+
+#contacto .bg-dark {
+    background-color: var(--quaternary-dark-color) !important;
+}
+
+#contacto .text-muted {
+    color: #a0a0a0 !important;
+}
+
+/* Presupuestos Styles */
+#presupuestos {
+    background-color: var(--secondary-color);
+}
+
+#presupuestos .form-control,
+#presupuestos .form-select {
+    border: 1px solid #dee2e6;
+    padding: 1rem 0.75rem;
+}
+
+#presupuestos .form-control:focus,
+#presupuestos .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(215, 35, 35, 0.25);
+}
+
+#presupuestos .form-floating > .form-control:focus ~ label,
+#presupuestos .form-floating > .form-control:not(:placeholder-shown) ~ label,
+#presupuestos .form-floating > .form-select:focus ~ label,
+#presupuestos .form-floating > .form-select:not(:placeholder-shown) ~ label {
+    color: var(--primary-color);
+}
+
+#presupuestos .btn-dark {
+    background-color: var(--quaternary-dark-color);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#presupuestos .btn-dark:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Estilos para los acordeones */
+#presupuestos .accordion-button {
+    background-color: white;
+    color: var(--quaternary-dark-color);
+    font-weight: 500;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#presupuestos .accordion-button:not(.collapsed) {
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+#presupuestos .accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+#presupuestos .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D72323'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+#presupuestos .accordion-body {
+    padding: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+#presupuestos .accordion-item {
+    background-color: white;
+    border-radius: 0;
+    margin-bottom: 0.5rem;
+}
+
+#presupuestos .accordion-item:last-child {
+    margin-bottom: 0;
+}
