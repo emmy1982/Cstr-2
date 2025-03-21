@@ -15,7 +15,7 @@ body {
     scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
     letter-spacing: -0.08em;
-    font-size: 1rem;
+    font-size: 1.1rem;
     background-color: var(--secondary-color);
 }
 h1{
@@ -101,6 +101,14 @@ h1{
     padding-top: 76px;
 }
 
+.title-section{
+    color: var(--primary-color);
+}
+
+.container-dark{
+    background-color: var(--quaternary-dark-color);
+}
+
 /* Estilos responsive para el hero */
 @media (max-width: 991.98px) {
     .container__hero {
@@ -158,4 +166,19 @@ h1{
         height: 80%; /* Ocupa todo el alto del contenedor */
         z-index: 1; /* Por debajo del texto */
     }
+}
+
+.container-dark .bi {
+    color: var(--primary-color) !important;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container-dark .col {
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.container-dark .col:hover {
+    transform: translateY(-5px);
 }
